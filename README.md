@@ -1,24 +1,67 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#　テーブル
 
-Things you may want to cover:
+## users
 
-* Ruby version
+| column   | 　 type | options     |
+| -------- | ------- | ----------- |
+| nickname | string  | null: false |
+| email    | string  | null: false |
+| password | string  | null: false |
 
-* System dependencies
+### Association
 
-* Configuration
+- has_many: lists
+- has_many: comments
+- has_many: loves
 
-* Database creation
+## lists
 
-* Database initialization
+| column                             | 　 type    | options                       |
+| ---------------------------------- | ---------- | ----------------------------- |
+| Food expenses                      | integer    |                               |
+| Miscellaneous expenses             | integer    |                               |
+| Communication and utility expenses | integer    |                               |
+| Housing expense                    | integer    |                               |
+| Beauty and clothing expenses       | integer    |                               |
+| Entertainment expenses             | integer    |                               |
+| Education                          | integer    |                               |
+| Insurance                          | integer    |                               |
+| Storage                            | integer    |                               |
+| user_id                            | references | null:false, foreign_key: true |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+- belongs_to: user
+- has_many: comments
+- has_many: loves
 
-* Deployment instructions
+## comments
 
-* ...
+| column  | 　 type    | options                         |
+| ------- | ---------- | ------------------------------- |
+| content | string     | null: false                     |
+| user_id | references | null: false, foreign_key : true |
+| list_id | references | null: false, foreign_key : true |
+
+### Association
+
+lists テーブルにネストしている
+
+- belongs_to :user
+- belongs_to :list
+
+## loves
+
+| column  | 　 type    | options                         |
+| ------- | ---------- | ------------------------------- |
+| user_id | references | null: false, foreign_key : true |
+| list_id | references | null: false, foreign_key : true |
+
+### Association
+
+lists テーブルにネストしている
+
+- belongs_to :user
+- belongs_to :list

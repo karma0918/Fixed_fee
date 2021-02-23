@@ -1,6 +1,17 @@
 # README
 
+## gem 一覧
+
+devise
+ransack
+kaminari
+rspec-rails
+factory_bot_rails
+bootstrap
+
 #　テーブル
+
+---
 
 ## users
 

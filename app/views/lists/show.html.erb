@@ -1,0 +1,75 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-10 mx-auto">
+      <div class="container">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+          <h1 class="display-4">固定費管理アプリ</h1>
+          <p class="lead">皆さんお金が貯まらないとか、言っていませんか？それこれで、解決します。それがこれ、<code class="small"> FLXED_FEE</code>これで、いろんなひとで、勉強して支出カット、お金持ちに近づきましょう。</p>
+        </div>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">固定費</th>
+              <th scope="col">種類</th>
+              <th scope="col">円</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>住居費</td>
+              <td>円</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>食費</td>
+              <td>円</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>通信費</td>
+              <td>円</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>光熱費</td>
+              <td>円</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>雑費</td>
+              <td>円</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>美容・服飾費</td>
+              <td>円</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>エンタメ</td>
+              <td>円</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>教育費</td>
+              <td>円</td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>保険代</td>
+              <td>円</td>
+            </tr>
+            <tr>
+              <th scope="row">10</th>
+              <td>貯蓄</td>
+              <td>円</td>
+            </tr>
+          </tbody>
+        </table>
+      <%= link_to '編集',edit_list_path, class: "btn btn-outline-primary" %>
+      <%= link_to '削除',list_path, method: :delete, class:"btn btn-outline-danger" %>
+      </div>
+    </div>
+  </div>
+</div>
